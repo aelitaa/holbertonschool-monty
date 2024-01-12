@@ -19,4 +19,6 @@ void initialize_arguments()
 	arguments->line = NULL;
 	arguments->n_tokens = 0;
 	arguments->line_number = 0;
+	arguments->stack_length = 0;
+	arguments->head = NULL;
 }

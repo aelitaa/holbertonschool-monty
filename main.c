@@ -22,7 +22,7 @@ size_t n = 0;
 		tokenize_line();
 		get_instruction();
 		run_instruction();
-		free_tokens;
+		free_tokens();
 
 	}
 

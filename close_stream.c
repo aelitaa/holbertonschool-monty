@@ -4,8 +4,8 @@
 */
 void close_stream(void)
 {
-	if (arguments-›stream == NULL)
+	if (arguments->stream == NULL)
 		return;
-	fclose (arguments-›stream);
-	arguments-›stream = NULL;
+	fclose (arguments->stream);
+	arguments->stream = NULL;
 }
