@@ -27,7 +27,7 @@ size_t n = 0;
 	}
 
 	close_stream();
-	/*free_arguments();*/
+	free_arguments();
 
 	return (0);
 }

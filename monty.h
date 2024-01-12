@@ -19,6 +19,9 @@ void free_tokens(void);
 void close_stream(void);
 int is_number(char *str);
 void invalid_instruction(void);
+void free_arguments();
+void free_head(void);
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -34,6 +37,9 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+
+void free_stack(stack_t *head);
+
 
 /**
  * struct instruction_s - opcode and its function
