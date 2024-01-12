@@ -10,7 +10,7 @@ void get_instruction(void)
 
 	instruction_t instructions[] =
 	{
-		{"push", &push}
+		{"push", &push}, {"pall", &pall}
 	};
 
 	if (arguments->n_tokens == 0) /* no instructions */
