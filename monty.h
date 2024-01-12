@@ -7,7 +7,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
-
+#include <ctype.h>
 void validate_arguments(int argc);
 void initialize_arguments(void);
 void get_stream(char *fileName);

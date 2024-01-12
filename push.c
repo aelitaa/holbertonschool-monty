@@ -8,6 +8,7 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
+printf("n_tokens: %d, tokens[1]: %s\n", arguments->n_tokens, arguments->tokens[1]);
 	if (arguments->n_tokens <= 1 || !(is_number(arguments->tokens[1])))
 	{
 	free_arguments();

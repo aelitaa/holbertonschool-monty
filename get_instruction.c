@@ -10,22 +10,28 @@ void get_instruction(void)
 
 	instruction_t instructions[] =
 	{
-		{"push", &push}, {"pall", &pall}
+	 {"push", &push}, {"pall", &pall}, {NULL, NULL}
 	};
 
-	if (arguments->n_tokens == 0) /* no instructions */
-		return;
+	printf("First token: %s\n", arguments->tokens[0]);
 
+	if (arguments->n_tokens == 0)
+	{
+	printf("You my friend, will be here forever...\n");
+		return;
+	}
 	for (; instructions[i].opcode != NULL; i++)
 	{
-		/* compare opcode of instruction to first token (instruct..) */
+	printf("Checking instruction: %s\n", instructions[i].opcode);
+
 		if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
 	{
 		arguments->instruction->opcode = instructions[i].opcode;
 		arguments->instruction->f = instructions[i].f;
+		printf("Matched instruction: %s\n", arguments->instruction->opcode);
 		return;
 	}
 }
-
+	printf("Invalid instruction encountered: %s\n", arguments->tokens[0]);
 	invalid_instruction();
 }

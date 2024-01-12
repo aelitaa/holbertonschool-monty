@@ -1,17 +1,16 @@
 #include "monty.h"
-
 /**
 *
 *tokenize_line - Tokenizes the line read from file.
 */
-
 void tokenize_line(void)
 {
 	int i = 0;
-	char *delims = "\n", *token = NULL, *linecpy = NULL;
+	char *delims = "\n ", *token = NULL, *linecpy = NULL;
 
-	linecpy = malloc(sizeof(char) * (strlen(arguments->line) +1 ));
+	linecpy = malloc(sizeof(char) * (strlen(arguments->line) + 1));
 	arguments->n_tokens = 0;
+	strcpy(linecpy, arguments->line);
 	token = strtok(linecpy, delims);
 	while (token)
 	{

@@ -14,6 +14,10 @@ size_t n = 0;
 
 	validate_arguments(argc);
 	initialize_arguments();
+	if (arguments == NULL) {
+	fprintf(stderr, "Failed to allocate memory for arguments.\n");
+	exit(EXIT_FAILURE);
+	}
 	get_stream(argv[1]);
 
 	while (getline(&arguments->line, &n, arguments->stream) != -1)
