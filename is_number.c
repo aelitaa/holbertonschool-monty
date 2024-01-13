@@ -17,7 +17,7 @@ int is_number(char *str)
 
 	for (i = 0; i < len; i++)
 	{
-	if ((!isdigit(str[i]) && i != len - 1) || (i == len - 1 && str[i] != '$'))
+	if (!isdigit(str[i]))
 	return 0;
 	}
 	return(1);

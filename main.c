@@ -22,11 +22,11 @@ size_t n = 0;
 
 	while (getline(&arguments->line, &n, arguments->stream) != -1)
 	{
-        	arguments->line_number += 1;
-		tokenize_line();
-		get_instruction();
-		run_instruction();
-		free_tokens();
+	arguments->line_number += 1;
+	tokenize_line();
+	get_instruction();
+	run_instruction();
+	free_tokens();
 
 	}
 
