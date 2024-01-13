@@ -1,11 +1,13 @@
 #include "monty.h"
+
 /**
  * free_arguments - free memory allocated to arguments pointer
  */
+
 void free_arguments()
 {
 	if (arguments == NULL)
-		return;
+	return;
 
 	if (arguments->instruction)
 	{

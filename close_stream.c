@@ -6,6 +6,6 @@ void close_stream(void)
 {
 	if (arguments->stream == NULL)
 		return;
-	fclose(arguments->stream);
+	fclose (arguments->stream);
 	arguments->stream = NULL;
 }
