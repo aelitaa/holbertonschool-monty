@@ -6,32 +6,36 @@
 
 void get_instruction(void)
 {
-	int i = 0;
+        int i = 0;
 
-	instruction_t instructions[] =
+        instruction_t instructions[] =
+        {
+         {"push", &push}, {"pall", &pall}, {NULL, NULL}
+        };
+
+        if (arguments->n_tokens == 0)
+        {
+                return;
+        }
+
+	/* Get the instruction*/
+	char *instruction = arguments->tokens[0];
+
+	/* Check if the last character is a dollar sign*/
+	size_t len = strlen(instruction);
+	if (len > 0 && instruction[len - 1] == '$')
 	{
-	 {"push", &push}, {"pall", &pall}, {NULL, NULL}
-	};
-
-	printf("First token: %s\n", arguments->tokens[0]);
-
-	if (arguments->n_tokens == 0)
-	{
-	printf("You my friend, will be here forever...\n");
-		return;
+	  /*If the last character is a dollar sign, ignore it*/
+		instruction[len - 1] = '\0';
 	}
-	for (; instructions[i].opcode != NULL; i++)
-	{
-	printf("Checking instruction: %s\n", instructions[i].opcode);
-
-		if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
-	{
-		arguments->instruction->opcode = instructions[i].opcode;
-		arguments->instruction->f = instructions[i].f;
-		printf("Matched instruction: %s\n", arguments->instruction->opcode);
-		return;
-	}
+        for (; instructions[i].opcode != NULL; i++)
+        {
+                if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
+        {
+                arguments->instruction->opcode = instructions[i].opcode;
+                arguments->instruction->f = instructions[i].f;
+                return;
+        }
 }
-	printf("Invalid instruction encountered: %s\n", arguments->tokens[0]);
-	invalid_instruction();
+        invalid_instruction();
 }
