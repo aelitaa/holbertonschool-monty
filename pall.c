@@ -19,7 +19,7 @@ void pall(stack_t **stack, unsigned int line_number)
 	tmp = arguments->head;
 	while (tmp != NULL)
 	{
-		printf("%d", tmp->n);
+		printf("%d\n", tmp->n);
 		tmp = tmp->next;
 	}
 }
