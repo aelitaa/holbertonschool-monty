@@ -6,26 +6,24 @@
 
 void get_instruction(void)
 {
-        int i = 0;
+	int i = 0;
 
-        instruction_t instructions[] =
-        {
-         {"push", &push}, {"pall", &pall}, {NULL, NULL}
-        };
+	instruction_t instructions[] =
+	{
+		{"push", &push}, {"pall", &pall}, {NULL, NULL}
+	};
 
-        if (arguments->n_tokens == 0)
-        {
-                return;
-        }
+	if (arguments->n_tokens == 0)
+		return;
 
-        for (; instructions[i].opcode != NULL; i++)
-        {
-                if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
-        {
-                arguments->instruction->opcode = instructions[i].opcode;
-                arguments->instruction->f = instructions[i].f;
-                return;
-        }
-}
-        invalid_instruction();
+	for (; instructions[i].opcode != NULL; i++)
+	{
+		if (strcmp(instructions[i].opcode, arguments->tokens[0]) == 0)
+		{
+			arguments->instruction->opcode = instructions[i].opcode;
+			arguments->instruction->f = instructions[i].f;
+			return;
+		}
+	}
+	invalid_instruction();
 }

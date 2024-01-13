@@ -4,7 +4,7 @@
  * free_arguments - free memory allocated to arguments pointer
  */
 
-void free_arguments()
+void free_arguments(void)
 {
 	if (arguments == NULL)
 	return;
