@@ -8,17 +8,24 @@
 
 int is_number(char *str)
 {
-  int i, len = strlen(str);
 
-	if (str == NULL)
-	{
-		return 0;
-	}
+        int i = 0;
 
-	for (i = 0; i < len; i++)
-	{
-	if (!isdigit(str[i]))
-	return 0;
-	}
-	return(1);
+        if (str == NULL)
+        {
+                return 0;
+        }
+
+        while (str[i])
+        {
+                if (i == 0 && str[i] == '-' && str[i + 1])
+                {
+                        i++;
+                        continue;
+                }
+                if (str[i] < '0' || str[i] > '9')
+                        return(0);
+                i++;
+        }
+        return(1);
 }
