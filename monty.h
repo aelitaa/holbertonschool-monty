@@ -42,7 +42,9 @@ typedef struct stack_s
 void free_stack(stack_t *head);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
-
+void swap(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
