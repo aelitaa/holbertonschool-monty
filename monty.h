@@ -21,7 +21,7 @@ int is_number(char *str);
 void invalid_instruction(void);
 void free_arguments();
 void free_head(void);
-
+void free_all_args(void);
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -39,7 +39,7 @@ typedef struct stack_s
 } stack_t;
 
 void free_stack(stack_t *head);
-
+void pint(stack_t **stack, unsigned int line_number);
 
 /**
  * struct instruction_s - opcode and its function

@@ -9,7 +9,7 @@ void get_instruction(void)
 	int i = 0;
 
 	instruction_t instructions[] = {
-		{"push", &push}, {"pall", &pall}, {NULL, NULL}
+		{"push", &push}, {"pall", &pall}, {"pint", &pint}, {NULL, NULL}
 	};
 
 	if (arguments->n_tokens == 0)
