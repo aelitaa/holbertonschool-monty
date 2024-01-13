@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * getting_stream_failer - Handles the error
+ * getting_stream_failed - Handles the error
  * @fileName: name of the file that failed to open.
  */
 

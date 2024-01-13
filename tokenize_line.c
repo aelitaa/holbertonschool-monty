@@ -1,6 +1,5 @@
 #include "monty.h"
 /**
-*
 *tokenize_line - Tokenizes the line read from file.
 */
 void tokenize_line(void)
