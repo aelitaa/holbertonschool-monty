@@ -8,8 +8,7 @@ void get_instruction(void)
 {
 	int i = 0;
 
-	instruction_t instructions[] =
-	{
+	instruction_t instructions[] = {
 		{"push", &push}, {"pall", &pall}, {NULL, NULL}
 	};
 

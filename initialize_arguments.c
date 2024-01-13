@@ -5,15 +5,15 @@
  *
  */
 
-void initialize_arguments()
+void initialize_arguments(void)
 {
 	arguments = malloc(sizeof(arg_t));
 	if (arguments == NULL)
-	malloc_failed();
+		malloc_failed();
 
 	arguments->instruction = malloc(sizeof(instruction_t));
 	if (arguments->instruction == NULL)
-	malloc_failed();
+		malloc_failed();
 
 	arguments->stream = NULL;
 	arguments->line = NULL;
