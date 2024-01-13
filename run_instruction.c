@@ -7,6 +7,7 @@
 void run_instruction(void)
 {
 	stack_t *stack = NULL;
+	
 	if (arguments == NULL)
 	{
 		fprintf(stderr, "Arguments is NULL.\n");
