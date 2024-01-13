@@ -13,7 +13,7 @@ int is_number(char *str)
 
 	if (str == NULL)
 	{
-		return 0;
+		return (0);
 	}
 
 	while (str[i])
@@ -24,8 +24,8 @@ int is_number(char *str)
 			continue;
 		}
 		if (str[i] < '0' || str[i] > '9')
-			return(0);
+			return (0);
 		i++;
 	}
-	return(1);
+	return (1);
 }
