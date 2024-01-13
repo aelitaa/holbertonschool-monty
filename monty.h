@@ -44,7 +44,6 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
-void nop(stack_t **stack, unsigned int line_number);
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -77,7 +76,7 @@ typedef struct arg_s
 	int n_tokens;
 	instruction_t *instruction;
 	stack_t *head;
-	int *stack_length;
+	int stack_length;
 } arg_t;
 
 extern arg_t *arguments;
