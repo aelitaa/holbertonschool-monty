@@ -1,8 +1,7 @@
 #include "monty.h"
 
 /**
-*
-* free_all_args - Frees all allocated memory for arguments
+*free_all_args - Frees all allocated memory for arguments
 */
 
 void free_all_args(void)
